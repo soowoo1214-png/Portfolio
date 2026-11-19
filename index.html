@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="HSJ 영상편집 · AI 영상 제작 · 디자인 포트폴리오. 영상과 디자인 작업을 소개합니다." name="description"/>
+  <title>
+   HSJ | Creative Portfolio
+  </title>
+  <link href="MY-PORTFOLIO-FILES/05-branding/favicon.svg" rel="icon"/>
+  <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <script defer="" src="vendor/bootstrap.bundle.min.js">
+  </script>
+  <script defer="" src="data/projects.js">
+  </script>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/main.js">
+  </script>
+  <script defer src="js/gallery.js"></script>
+  <script defer src="js/hero.js"></script>
+ </head>
+ <body>
+  <a class="skip" href="#works">
+   작품으로 바로 가기
+  </a>
+  <header class="site-header" id="header">
+   <nav aria-label="주 메뉴" class="shell navbar navbar-expand-md">
+    <a aria-label="HSJ 처음으로" class="brand" href="#home">
+     HSJ
+    </a>
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="메뉴 열기" class="navbar-toggler" data-bs-target="#main-nav" data-bs-toggle="collapse">
+     <span aria-hidden="true">
+      ☰
+     </span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-nav">
+     <div class="nav-links ms-auto">
+      <a href="#works">
+       WORKS
+      </a>
+      <a href="#contact">
+       CONTACT
+      </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <section aria-labelledby="hero-title" class="hero" id="home">
+    <img alt="" class="hero-media" src="MY-PORTFOLIO-FILES/04-team-project/thumbnails/01-dongbaek-coffee.png"/>
+    <video aria-hidden="true" class="hero-media" id="hero-video" muted="" playsinline="" poster="MY-PORTFOLIO-FILES/04-team-project/thumbnails/01-dongbaek-coffee.png" preload="metadata" tabindex="-1">
+     <source src="MY-PORTFOLIO-FILES/04-team-project/dongbaek-coffee.mp4" type="video/mp4"/>
+    </video>
+    <div class="hero-shade">
+    </div>
+    <div class="shell hero-copy">
+     <p class="eyebrow">
+      VIDEO EDITOR &amp; AI CREATOR
+     </p>
+     <h1 id="hero-title">
+      Ideas into Motion.
+     </h1>
+     <p class="hero-subtitle">
+      아이디어를 영상으로, 상상을 콘텐츠로.
+     </p>
+     <a class="primary-button" href="#works">
+      VIEW MY WORK
+     </a>
+    </div>
+    <div class="shell hero-foot">
+     <span>
+      2026 CREATIVE PORTFOLIO
+     </span>
+     <div class="hero-controls">
+      <button aria-label="배경 영상 재생" aria-pressed="false" id="motion-toggle">
+       ▷
+      </button>
+      <a aria-label="작품으로 내려가기" href="#works">
+       <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="m4 8 8 8 8-8">
+        </path>
+       </svg>
+      </a>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="works-title" class="section shell" id="works">
+    <h2 id="works-title">
+     WORKS
+    </h2>
+    <div class="work-toolbar">
+     <div aria-label="작품 분류" class="filters" role="group">
+      <button aria-pressed="true" data-filter="all">
+       ALL
+      </button>
+      <button aria-pressed="false" data-filter="video">
+       VIDEO
+      </button>
+      <button aria-pressed="false" data-filter="ai">
+       AI CREATIVE
+      </button>
+      <button aria-pressed="false" data-filter="design">
+       DESIGN
+      </button>
+<button aria-pressed="false" data-filter="team">TEAM PROJECT</button>
+     </div>
+     <span id="result-count" role="status">
+     </span>
+    </div>
+    <p class="sample-notice">
+     영상부터 AI 콘텐츠, 디자인까지. 작업을 선택해 자세히 살펴보세요.
+    </p>
+    <div class="row g-4" id="project-grid">
+    </div>
+    <noscript>
+     작품 목록을 보려면 JavaScript를 켜주세요.
+    </noscript>
+    <div id="load-area" class="load-area"><button id="load-more" type="button">작업 더 보기</button><p id="load-status" role="status"></p></div>
+   </section>
+   <section aria-labelledby="contact-title" class="section shell" id="contact">
+    <h2 id="contact-title">
+     CONTACT
+    </h2>
+    <div class="contact-links" id="contact-links">
+    </div>
+   </section>
+  </main>
+  <footer class="shell">
+   <a class="brand" href="#home">
+    HSJ
+   </a>
+   <span>
+    ©
+    <span data-year="">
+    </span>
+    HSJ
+   </span>
+   <a aria-label="맨 위로" href="#home">
+    ↑
+   </a>
+  </footer>
+  <dialog aria-labelledby="design-title" id="design-dialog">
+   <div class="dialog-head">
+    <h2 id="design-title">
+    </h2>
+    <button aria-label="디자인 팝업 닫기" id="dialog-close">
+     ×
+    </button>
+   </div>
+   <div class="viewer-wrap">
+    <div aria-label="디자인 이미지. 스크롤 또는 드래그하여 이동" id="design-viewport" tabindex="0">
+     <img alt="" draggable="false" id="design-image"/>
+    </div>
+    <div class="edge-zone edge-left">
+     <button aria-label="이전 이미지" id="slide-prev">
+      ‹
+     </button>
+    </div>
+    <div class="edge-zone edge-right">
+     <button aria-label="다음 이미지" id="slide-next">
+      ›
+     </button>
+    </div>
+   </div>
+   <div class="dialog-bottom">
+    <span id="slide-status" role="status">
+    </span>
+    <button aria-pressed="false" aria-label="원본 크기로 보기" id="zoom-toggle">⤢</button>
+   </div>
+  </dialog>
+ </body>
+</html>
+
